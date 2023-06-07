@@ -1,4 +1,33 @@
 
+const refs = {
+    parent: document.querySelector('#parent'), 
+    child: document.querySelector('#child'),
+    innerChild: document.querySelector('#inner-child'),
+}
+
+refs.parent.addEventListener('click', onParentClick)
+refs.child.addEventListener('click', onChildClick)
+refs.innerChild.addEventListener('click', onInnerChildClick)
+
+function onParentClick(event){
+    console.log(event.currentTarget)
+}
+
+function onChildClick(event){
+    console.log(event.currentTarget)
+}
+
+function onInnerChildClick(event){
+    console.log(event.currentTarget)
+}
+
+
+
+
+
+
+
+
 
 // const container = document.querySelector('.js-container')
 
