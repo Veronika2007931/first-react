@@ -1,5 +1,14 @@
 
+// const containerEl = document.querySelector('.js-container')
+// containerEl.addEventListener('click', onButtonClick)
 
+// function onButtonClick(event){
+//   if(event.target.nodeName !== 'BUTTON'){
+//     return
+//   }
+//   console.log(event.target.nodeName)
+//    console.log(event.target.textContent)
+// }
 // const container = document.querySelector('.js-container')
 
 // container.addEventListener('click', onButtonClick)
@@ -25,12 +34,13 @@ const colors = [
     { hex: '#ffeb3b', rgb: '255,235,59' },
     { hex: '#ff9800', rgb: '255,152,0' },
     { hex: '#795548', rgb: '121,85,72' },
-  { hex: '#607d8b', rgb: '96,125,139' },
+    { hex: '#607d8b', rgb: '96,125,139' },
   ];
 
   function returnHtml(){
    return colors.map(([hex, rgb])=> {
-        return `<div class="color-card">
+        return `
+          <div class="color-card">
         <div
         class="color-swatch"
         data-hex="${hex}"
