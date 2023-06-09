@@ -1,6 +1,38 @@
 
+
 // const containerEl = document.querySelector('.js-container')
 // containerEl.addEventListener('click', onButtonClick)
+
+const refs = {
+    parent: document.querySelector('#parent'), 
+    child: document.querySelector('#child'),
+    innerChild: document.querySelector('#inner-child'),
+}
+
+refs.parent.addEventListener('click', onParentClick)
+refs.child.addEventListener('click', onChildClick)
+refs.innerChild.addEventListener('click', onInnerChildClick)
+
+function onParentClick(event){
+    console.log(event.currentTarget)
+}
+
+function onChildClick(event){
+    console.log(event.currentTarget)
+}
+
+function onInnerChildClick(event){
+    console.log(event.currentTarget)
+}
+
+
+
+
+
+
+
+
+
 
 // function onButtonClick(event){
 //   if(event.target.nodeName !== 'BUTTON'){
@@ -20,6 +52,7 @@
 //   console.log(event.target.nodeName);
 //   console.log(event.target.textContent);
 // }
+
 
 const colors = [
     { hex: '#f44336', rgb: '244,67,54' },
@@ -46,18 +79,25 @@ const colors = [
         data-hex="${hex}"
         data-rgb="${rgb}"
         style="background-color: "${hex}">
+
+//         <div
+//         class="color-swatch"
+//         data-hex="${hex}"
+//         data-rgb="${rgb}"
+//         style="background-color: "${hex}">
+
       
-      </div>
-         <div class="color-meta">
-           <p>HEX:${hex} </p>
-           <p>RGB:${rgb} </p>
-         </div>
-       </div>`
+//       </div>
+//          <div class="color-meta">
+//            <p>HEX:${hex} </p>
+//            <p>RGB:${rgb} </p>
+//          </div>
+//        </div>`
     }).join('')
   }
 
-console.log(returnHtml())
-const div = document.querySelector('.js-palette')
-div.insertAdjacentHTML('beforeend', arr)
+// console.log(returnHtml())
+// const div = document.querySelector('.js-palette')
+// div.insertAdjacentHTML('beforeend', arr)
 
 
