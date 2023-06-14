@@ -84,22 +84,26 @@ const galleryItems = [
  const ul = document.querySelector('.js-gallery')
  ul.insertAdjacentHTML('beforeend', getPictures)
 
-// ul.addEventListener('click', getModalOpen)
+ul.addEventListener('click', getModalOpen)
 
 const modal = document.querySelector('.lightbox')
 const imgInModal = document.querySelector('.lightbox__image')
 
 function getModalOpen(event){
+  console.log(event.target)
    if(event.target.nodeName !== "IMG"){
     return
    }
-   const data = event.target.dataset.source 
    modal.classList.add("is-open")
+   const data = event.target.dataset.source 
    imgInModal.src = data
+ 
 }
+const closeModal = document.querySelector('.lightbox__button')
+closeModal.addEventListener('click', onBtnClose)                                                                                                                                                                                             
 
-                                                                                                                                                                                                   
-
-
+function onBtnClose(){
+  modal.classList.remove("is-open")
+}
 
 
