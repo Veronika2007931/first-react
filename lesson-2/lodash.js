@@ -1,17 +1,17 @@
 const coordsOutputRef = document.querySelector('.js-coords');
 let mouseMoveCbInvocationCounter = 0;
 
-// window.addEventListener('mousemove', _.throttle(onMouseMove,300));
+window.addEventListener('mousemove', _.throttle(onMouseMove,300));
  
-// function onMouseMove(event) {
-//     mouseMoveCbInvocationCounter += 1;
+function onMouseMove(event) {
+    mouseMoveCbInvocationCounter += 1;
   
-//     coordsOutputRef.textContent = `
-//       Кількість викликів onMouseMove: ${mouseMoveCbInvocationCounter},
-//       X:${event.clientX},
-//       Y:${event.clientY}
-//     `;
-//   }
+    coordsOutputRef.textContent = `
+      Кількість викликів onMouseMove: ${mouseMoveCbInvocationCounter},
+      X:${event.clientX},
+      Y:${event.clientY}
+    `;
+  }
 
 //   const inputRef = document.querySelector('.js-input');
 //   const outputRef = document.querySelector('.js-output');
