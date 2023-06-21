@@ -3,6 +3,8 @@ const img = document.querySelectorAll('.img')
 const options = {
   rootMargin: '150px'
 }
+
+// isIntersecting це чи завантажилось воно на сторінці чи ні типу в вьюпорті
 const io = new IntersectionObserver((entries, observer)=>{
     entries.forEach(entry => {
    if(entry.isIntersecting){
